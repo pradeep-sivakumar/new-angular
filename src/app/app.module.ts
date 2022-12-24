@@ -16,13 +16,21 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { HomeComponent } from './home/home.component';
 import { SimpleifComponent } from './simpleif/simpleif.component';
 import {MatDividerModule} from '@angular/material/divider';
+import { LoopsComponent } from './loops/loops.component';
+import { StringBasedComponent } from './string-based/string-based.component';
+import { ArrayBasedComponent } from './array-based/array-based.component';
+import { LinksComponent } from './links/links.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    SimpleifComponent
+    SimpleifComponent,
+    LoopsComponent,
+    StringBasedComponent,
+    ArrayBasedComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,

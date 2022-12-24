@@ -10,46 +10,51 @@
     &nbsp;KSRCE CSE</a
   >
 </mat-toolbar>
-
+<style>
+  a{
+    text-decoration: none;
+    color: white;
+  }
+</style>
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav">
     <a class="menu-button">
       <img src="../assets/ksrlogo.png" alt="logo" width="80" />
     </a>
     <mat-divider></mat-divider>
-    <a class="menu-buttonv">
+    <a class="menu-buttonv" routerLink="/home"  (click)="sidenav.toggle()">
       <mat-icon>home</mat-icon>
       <span>Home Page</span>
     </a>
-    <a style="color: white !important" class="menu-buttonv">
+    <a style="color: white !important" class="menu-buttonv" routerLink="/simpleif"  (click)="sidenav.toggle()">
       <mat-icon>thumbs_up_down</mat-icon>
       <span>If/else Programs</span>
     </a>
-    <a class="menu-buttonv">
+    <a class="menu-buttonv" routerLink="/loops"  (click)="sidenav.toggle()">
       <mat-icon>repeat</mat-icon>
       <span>Loops Programs</span>
     </a>
-    <a class="menu-buttonv">
+    <a class="menu-buttonv" routerLink="/string-based"  (click)="sidenav.toggle()">
       <mat-icon>format_shapes</mat-icon>
       <span>String Programs</span>
     </a>
-    <a class="menu-buttonv">
+    <a class="menu-buttonv" routerLink="/array-based"  (click)="sidenav.toggle()">
       <mat-icon>view_array</mat-icon>
       <span>Array Programs</span>
     </a>
-    <a class="menu-buttonv">
+    <a class="menu-buttonv" routerLink="links"  (click)="sidenav.toggle()">
       <mat-icon>link</mat-icon>
       <span>Useful Links</span>
     </a>
 
     <mat-divider></mat-divider>
 
-    <a class="menu-buttonv">
+    <a class="menu-buttonv" href="#"  (click)="sidenav.toggle()">
       <mat-icon>help</mat-icon>
       <span>Suggestions / Help</span>
     </a>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div class="content mat-elevation-z4">Main content</div>
+    <div class="content mat-elevation-z4"><router-outlet></router-outlet></div>
   </mat-sidenav-content>
 </mat-sidenav-container>
